@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: my-namespace  # Replace with the actual namespace where MariaDB is running
+spec:
+  type: NodePort  # Change to ClusterIP if you want internal access only
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 30080  # Optional: specify a node port if using NodePort
+  selector:
+    app: nginx  # Ensure this matches the labels in your nginx deployment

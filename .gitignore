@@ -1,3 +1,4 @@
 theme-park-ride-gradle_mariadb.jar
 theme-park-ride-gradle.jar
 .env
+*.tar

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+  namespace: my-namespace
+data:
+  NGINX_REPLICAS: "2"
+  NGINX_SSH_PORT: "22"
+  NGINX_SERVICE_PORT: "80"
+  NGINX_IMAGE: my-nginx-image:latest
